@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IHM MANIA</title>
+  <link rel="stylesheet" href="IHM.css" />
+</head>
+<body>
+
+  <!-- ZONE PRINCIPALE (logo, titre, boutons) -->
+  <header>
+    <div class="left-section">
+      <a href="ihm.html">
+        <img src="logo/logo IHM.png" alt="Logo IHM" class="logo" />
+      </a>
+      <h1 class="neon-title">IHM MANIA</h1>
+    </div>
+    <div class="button-group">
+      <button>Inscription</button>
+      <button>Connexion</button>
+    </div>
+  </header>
+
+  <!-- BARRE DE MENU DEROULANTS EN DESSOUS -->
+  <nav class="main-nav">
+    <div class="button-bar">
+      <button>Accueil</button>
+      <button>Ressources</button>
+      <button>Cours</button>
+      <button>Exercices</button>
+      <button>Forum</button>
+      <button>Groupes</button>
+      <button>Evénement</button>
+      <button>FAQ</button>
+    </div>
+    <div class="search-bar">
+      <input type="text" placeholder="Recherche..." />
+    </div>
+  </nav>
+
+  <!-- 👇 CONTENU PRINCIPAL (avec espace haut/bas) -->
+  <main class="content">
+    <section class="carousels">
+      <!-- Carrousel 1 -->
+      <div class="carousel-block">
+        <h2 class="carousel-title">Découvrir l'IHM</h2>
+        <div class="carousel-wrapper">
+          <img src="logo/fleche gauche .png" class="carousel-arrow left" data-target="carousel-1" alt="left">
+          <div class="carousel" id="carousel-1">
+            <div class="carousel-item">
+              <h3>Histoire de l'IHM</h3>
+              <img src="logo/livre.png" alt="Figma">
+              <p>Les origines de l'IHM</p>
+            </div>
+            <div class="carousel-item">
+              <h3>Concepte clés de l'IHM</h3>
+              <img src="logo/outis.png" alt="XD">
+              <p>Qu'es qu'une bonne interfaces hommes-machines?</p>
+            </div>
+            <div class="carousel-item">
+              <h3>Articles, video et bibliographie</h3>
+              <img src="logo/biblio.png" alt="XD">
+              <p>Les plus grandes créations en IHM.</p>
+            </div>
+          </div>
+          <img src="logo/fleche droite.png" class="carousel-arrow right" data-target="carousel-1" alt="right">
+        </div>
+      </div>
+
+      <!-- Carrousel 2 -->
+      <div class="carousel-block">
+        <h2 class="carousel-title">Apprentisage</h2>
+        <div class="carousel-wrapper">
+          <img src="logo/fleche gauche .png" class="carousel-arrow left" data-target="carousel-2" alt="left">
+          <div class="carousel" id="carousel-2">
+            <div class="carousel-item">
+              <h3>Cours Récent</h3>
+              <img src="logo/cours.png" alt="IHM">
+              <p>Les dernières méthodes pédagogique de l'IHM</p>
+            </div>
+            <div class="carousel-item">
+              <h3>Exercices</h3>
+              <img src="logo/exercices.png" alt="Accessibilité">
+              <p>Des exercices passionnants et incroyables</p>
+            </div>
+            <div class="carousel-item">
+              <h3>Prototype à évaluer</h3>
+              <img src="logo/balnace.png" alt="Accessibilité">
+              <p>Conseiller et encourager les autres !</p>
+            </div>
+            <div class="carousel-item">
+              <h3>Glossaire</h3>
+              <img src="logo/idee.png" alt="Accessibilité">
+              <p>Des exemples en tout genre pour innover</p>
+            </div>
+          </div>
+          <img src="logo/fleche droite.png" class="carousel-arrow right" data-target="carousel-2" alt="right">
+        </div>
+      </div>
+
+      <!-- Carrousel 3 -->
+      <div class="carousel-block">
+        <h2 class="carousel-title">La communauté</h2>
+        <div class="carousel-wrapper">
+          <img src="logo/fleche gauche .png" class="carousel-arrow left" data-target="carousel-3" alt="left">
+          <div class="carousel" id="carousel-3">
+            <div class="carousel-item">
+              <h3>Groupes populaires</h3>
+              <img src="logo/communauté.png" alt="Dashboard">
+              <p>Les groupes avec la communauté la plus dynamique.</p>
+            </div>
+            <div class="carousel-item">
+              <h3>Derniers messages</h3>
+              <img src="logo/texto.png" alt="Formulaire">
+              <p>Les discussions les plus récentes.</p>
+            </div>
+            <div class="carousel-item">
+              <h3>Événements</h3>
+              <img src="logo/calendrier.png" alt="Formulaire">
+              <p>Les prochains grands événements !</p>
+            </div>
+            <div class="carousel-item">
+              <h3>Actualités</h3>
+              <img src="logo/journal (1).png" alt="Formulaire">
+              <p>Les dernières actus de l'IHM.</p>
+            </div>
+          </div>
+          <img src="logo/fleche droite.png" class="carousel-arrow right" data-target="carousel-3" alt="right">
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- PIED DE PAGE -->
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="#"><img src="logo/loupe.png" alt="icon" class="footer-icon"> Qui sommes-nous</a>
+      <a href="#"><img src="logo/livre.png" alt="icon" class="footer-icon"> Mentions légales</a>
+      <a href="#"><img src="logo/logo IHM.png" alt="icon" class="footer-icon"> Contact</a>
+    </div>
+    <div class="footer-socials">
+      <a href="https://instagram.com" target="_blank"><img src="logo/Insta.png" alt="icon" class="footer-icon"> Instagram</a>
+      <a href="https://facebook.com" target="_blank"><img src="logo/faccebook.png" alt="icon" class="footer-icon"> Facebook</a>
+    </div>
+  </footer>
+
+  <script src="IHM.js"></script>
+</body>
+</html>
