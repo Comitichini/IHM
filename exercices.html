@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ressources - IHM MANIA</title>
+  <link rel="stylesheet" href="IHM.css" />
+</head>
+<body>
+  <!-- HEADER IDENTIQUE -->
+  <header>
+    <div class="left-section">
+      <a href="ihm.html">
+        <img src="logo/logo IHM.png" alt="Logo IHM" class="logo" />
+      </a>
+      <h1 class="neon-title">IHM MANIA</h1>
+    </div>
+    <div class="button-group">
+      <button>Inscription</button>
+      <button>Connexion</button>
+    </div>
+  </header>
+
+  <!-- NAVIGATION IDENTIQUE -->
+  <nav class="main-nav">
+    <div class="button-bar">
+      <button onclick="location.href='ihm.html'">Accueil</button>
+      <button onclick="location.href='ressources.html'">Ressources</button>
+      <button onclick="location.href='cours.html'">Cours</button>
+      <button onclick="location.href='exercices.html'">Exercices</button>
+      <button onclick="location.href='forum.html'">Forum</button>
+      <button onclick="location.href='groupes.html'">Groupes</button>
+      <button onclick="location.href='evenement.html'">Evénement</button>
+      <button onclick="location.href='faq.html'">FAQ</button>
+    </div>
+    <div class="search-bar">
+      <input type="text" placeholder="Recherche..." />
+    </div>
+  </nav>
+
+  <!-- BARRE DE CRITÈRES POUR EXERCICES -->
+<section class="custom-bar">
+    <select class="dropdown-menu">
+      <option>Exercice en programation</option>
+      <option>Exercice en conception</option>
+    </select>
+    <select class="dropdown-menu">
+      <option>Debutant</option>
+      <option>Intermediaire</option>
+      <option>Avancé</option>
+    </select>
+    <button class="action-button">Valider</button>
+    <img src="logo/logo IHM.png" alt="Icône interactive" class="clickable-image" />
+  </section>
+  
+  <!-- RÉSULTATS DES EXERCICES -->
+  <section class="search-results">
+    <div class="result-item">
+      <h3>Évaluer l'ergonomie d'une interface</h3>
+      <p class="result-description">Analysez les points forts et faibles d'une interface web selon les principes ergonomiques.</p>
+      <div class="result-tags">#Ergonomie #Débutant #Analyse</div>
+      <div class="result-buttons">
+        <button>Lire</button>
+        <button>Faire</button>
+        <button>Demander explication</button>
+        <button>Proposer solution</button>
+      </div>
+    </div>
+  
+    <div class="result-item">
+      <h3>Reproduire une maquette avec Figma</h3>
+      <p class="result-description">Exercice de reproduction fidèle d’une maquette mobile en utilisant Figma.</p>
+      <div class="result-tags">#Figma #Prototypage #Pratique</div>
+      <div class="result-buttons">
+        <button>Lire</button>
+        <button>Faire</button>
+        <button>Demander explication</button>
+        <button>Proposer solution</button>
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- FOOTER IDENTIQUE -->
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="#"><img src="logo/loupe.png" alt="icon" class="footer-icon"> Qui sommes-nous</a>
+      <a href="#"><img src="logo/livre.png" alt="icon" class="footer-icon"> Mentions légales</a>
+      <a href="#"><img src="logo/logo IHM.png" alt="icon" class="footer-icon"> Contact</a>
+    </div>
+    <div class="footer-socials">
+      <a href="https://instagram.com" target="_blank"><img src="logo/Insta.png" alt="icon" class="footer-icon"> Instagram</a>
+      <a href="https://facebook.com" target="_blank"><img src="logo/faccebook.png" alt="icon" class="footer-icon"> Facebook</a>
+    </div>
+  </footer>
+
+  <script src="IHM.js"></script>
+</body>
+</html>
