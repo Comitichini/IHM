@@ -36,10 +36,43 @@
       <h1 class="neon-title">IHM MANIA</h1>
     </div>
     <div class="button-group">
-      <button>Inscription</button>
-      <button>Connexion</button>
+      <button onclick="openModal('loginModal')">Connexion</button>
+      <button onclick="openModal('signupModal')">Inscription</button>
     </div>
   </header>
+  <!-- MODALE CONNEXION -->
+  <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('loginModal')">&times;</span>
+      <h2>Connexion</h2>
+      <form>
+        <label for="login-email">Email :</label><br>
+        <input type="email" id="login-email" required><br><br>
+        <label for="login-password">Mot de passe :</label><br>
+        <input type="password" id="login-password" required><br><br>
+        <button type="submit">Se connecter</button>
+      </form>
+      <p>Pas encore inscrit ? <a href="#" onclick="switchModal('loginModal', 'signupModal')">Créer un compte</a></p>
+    </div>
+  </div>
+  
+  <!-- MODALE INSCRIPTION -->
+  <div id="signupModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('signupModal')">&times;</span>
+      <h2>Inscription</h2>
+      <form>
+        <label for="signup-name">Nom :</label><br>
+        <input type="text" id="signup-name" required><br><br>
+        <label for="signup-email">Email :</label><br>
+        <input type="email" id="signup-email" required><br><br>
+        <label for="signup-password">Mot de passe :</label><br>
+        <input type="password" id="signup-password" required><br><br>
+        <button type="submit">S'inscrire</button>
+      </form>
+      <p>Déjà inscrit ? <a href="#" onclick="switchModal('signupModal', 'loginModal')">Se connecter</a></p>
+    </div>
+  </div>
 
   <!-- NAVIGATION -->
   <nav class="main-nav">
@@ -124,18 +157,52 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer class="footer">
+<!-- FOOTER -->
+<footer class="footer">
     <div class="footer-links">
-      <a href="#"><img src="logo/loupe.png" alt="icon" class="footer-icon"> Qui sommes-nous</a>
-      <a href="#"><img src="logo/livre.png" alt="icon" class="footer-icon"> Mentions légales</a>
-      <a href="#"><img src="logo/logo IHM.png" alt="icon" class="footer-icon"> Contact</a>
+      <a href="#" onclick="openModal('aboutModal')">
+        <img src="logo/loupe.png" alt="icon" class="footer-icon"> Qui sommes-nous
+      </a>
+      <a href="#" onclick="openModal('legalModal')">
+        <img src="logo/livre.png" alt="icon" class="footer-icon"> Mentions légales
+      </a>
+      <a href="#" title="Contactez-nous à : contact@ihmmania.com">
+        <img src="logo/logo IHM.png" alt="icon" class="footer-icon"> Contact
+      </a>
     </div>
     <div class="footer-socials">
       <a href="https://instagram.com" target="_blank"><img src="logo/Insta.png" alt="icon" class="footer-icon"> Instagram</a>
       <a href="https://facebook.com" target="_blank"><img src="logo/faccebook.png" alt="icon" class="footer-icon"> Facebook</a>
     </div>
   </footer>
+  
+  <!-- MODALE "Qui sommes-nous" -->
+  <div id="aboutModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('aboutModal')">&times;</span>
+      <h2>Qui sommes-nous ?</h2>
+      <p>
+        IHM MANIA est une communauté passionnée par les interfaces homme-machine, 
+        le design interactif, l’ergonomie et la technologie. Notre objectif est de favoriser 
+        l’apprentissage et la collaboration à travers des ressources, des groupes, des événements et un forum.
+      </p>
+    </div>
+  </div>
+  
+  <!-- MODALE "Mentions légales" -->
+  <div id="legalModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('legalModal')">&times;</span>
+      <h2>Mentions légales</h2>
+      <p>
+        Éditeur : IHM MANIA<br>
+        Responsable de la publication : L’équipe IHM MANIA<br>
+        Hébergeur : ServeurNet, 123 rue des Données, 75000 Paris<br>
+        Conformité RGPD : Vos données personnelles sont protégées et ne sont jamais transmises à des tiers.<br>
+        Cookies : Ce site utilise des cookies pour améliorer l’expérience utilisateur.
+      </p>
+    </div>
+  </div>
 
   <script src="IHM.js"></script>
 </body>

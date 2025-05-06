@@ -9,18 +9,53 @@
 <body>
 
   <!-- ZONE PRINCIPALE (logo, titre, boutons) -->
-  <header>
-    <div class="left-section">
-      <a href="ihm.html">
-        <img src="logo/logo IHM.png" alt="Logo IHM" class="logo" />
-      </a>
-      <h1 class="neon-title">IHM MANIA</h1>
-    </div>
-    <div class="button-group">
-      <button>Inscription</button>
-      <button>Connexion</button>
-    </div>
-  </header>
+<!-- HEADER -->
+<header>
+  <div class="left-section">
+    <a href="ihm.html">
+      <img src="logo/logo IHM.png" alt="Logo IHM" class="logo" />
+    </a>
+    <h1 class="neon-title">IHM MANIA</h1>
+  </div>
+  <div class="button-group">
+    <button onclick="openModal('loginModal')">Connexion</button>
+    <button onclick="openModal('signupModal')">Inscription</button>
+  </div>
+</header>
+<!-- MODALE CONNEXION -->
+<div id="loginModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('loginModal')">&times;</span>
+    <h2>Connexion</h2>
+    <form>
+      <label for="login-email">Email :</label><br>
+      <input type="email" id="login-email" required><br><br>
+      <label for="login-password">Mot de passe :</label><br>
+      <input type="password" id="login-password" required><br><br>
+      <button type="submit">Se connecter</button>
+    </form>
+    <p>Pas encore inscrit ? <a href="#" onclick="switchModal('loginModal', 'signupModal')">Créer un compte</a></p>
+  </div>
+</div>
+
+<!-- MODALE INSCRIPTION -->
+<div id="signupModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('signupModal')">&times;</span>
+    <h2>Inscription</h2>
+    <form>
+      <label for="signup-name">Nom :</label><br>
+      <input type="text" id="signup-name" required><br><br>
+      <label for="signup-email">Email :</label><br>
+      <input type="email" id="signup-email" required><br><br>
+      <label for="signup-password">Mot de passe :</label><br>
+      <input type="password" id="signup-password" required><br><br>
+      <button type="submit">S'inscrire</button>
+    </form>
+    <p>Déjà inscrit ? <a href="#" onclick="switchModal('signupModal', 'loginModal')">Se connecter</a></p>
+  </div>
+</div>
+
 
   <!-- BARRE DE NAVIGATION EN DESSOUS -->
   <nav class="main-nav">
@@ -131,19 +166,130 @@
       </div>
     </section>
   </main>
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const items = document.querySelectorAll('.carousel-item');
+      items.forEach(item => {
+        const title = item.querySelector('h3')?.textContent || '';
+  
+        if (title.includes("Histoire de l'IHM")) {
+          item.setAttribute('onclick', "openModal('modalHistoire')");
+        } else if (title.includes("Concepte cl")) {
+          item.setAttribute('onclick', "openModal('modalConcepts')");
+        } else if (title.includes("Articles")) {
+          item.setAttribute('onclick', "location.href='ressources.html'");
+        } else if (title.includes("Cours R")) {
+          item.setAttribute('onclick', "location.href='cours.html'");
+        } else if (title.includes("Exercices")) {
+          item.setAttribute('onclick', "location.href='exercices.html'");
+        } else if (title.includes("Prototype")) {
+          item.setAttribute('onclick', "location.href='forum.html'");
+        } else if (title.includes("Glossaire")) {
+          item.setAttribute('onclick', "openModal('modalGlossaire')");
+        } else if (title.includes("Groupes")) {
+          item.setAttribute('onclick', "location.href='groupes.html'");
+        } else if (title.includes("Derniers messages")) {
+          item.setAttribute('onclick', "location.href='faq.html'");
+        } else if (title.includes("Événements")) {
+          item.setAttribute('onclick', "location.href='evenement.html'");
+        } else if (title.includes("Actualit")) {
+          item.setAttribute('onclick', "openModal('modalActivite')");
+        }
+      });
+    });
+  </script>
+  
+  <!-- MODALE Histoire de l'IHM -->
+  <div id="modalHistoire" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modalHistoire')">&times;</span>
+      <h2>Histoire de l'IHM</h2>
+      <p>Des interfaces en ligne de commande aux interfaces graphiques actuelles, l’histoire de l’IHM est marquée par l’évolution des besoins utilisateurs et des technologies numériques.</p>
+    </div>
+  </div>
+  
+  <!-- MODALE Concepts clés -->
+  <div id="modalConcepts" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modalConcepts')">&times;</span>
+      <h2>Concepts clés de l'IHM</h2>
+      <p>Utilisabilité, feedback, affordance, charge cognitive, ergonomie : autant de concepts essentiels à la création d’interfaces efficaces et intuitives.</p>
+    </div>
+  </div>
+  
+  <!-- MODALE Glossaire -->
+  <div id="modalGlossaire" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modalGlossaire')">&times;</span>
+      <h2>Glossaire IHM</h2>
+      <p>
+        <strong>Affordance :</strong> indice sur la manière d’utiliser un objet<br>
+        <strong>Feedback :</strong> réaction visible du système à une action<br>
+        <strong>Heuristique :</strong> règle d’usage facilitant l’évaluation<br>
+        <strong>Prototype :</strong> version expérimentale d’un produit<br>
+        <strong>Persona :</strong> profil type d’utilisateur fictif
+      </p>
+    </div>
+  </div>
+  
+  <!-- MODALE Activité -->
+  <div id="modalActivite" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modalActivite')">&times;</span>
+      <h2>Activité IHM</h2>
+      <p>
+        Les activités IHM couvrent la recherche utilisateur, le prototypage, les tests, et l’optimisation des interfaces pour garantir efficacité, accessibilité et confort.
+      </p>
+    </div>
+  </div>
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-links">
+    <a href="#" onclick="openModal('aboutModal')">
+      <img src="logo/loupe.png" alt="icon" class="footer-icon"> Qui sommes-nous
+    </a>
+    <a href="#" onclick="openModal('legalModal')">
+      <img src="logo/livre.png" alt="icon" class="footer-icon"> Mentions légales
+    </a>
+    <a href="#" title="Contactez-nous à : contact@ihmmania.com">
+      <img src="logo/logo IHM.png" alt="icon" class="footer-icon"> Contact
+    </a>
+  </div>
+  <div class="footer-socials">
+    <a href="https://instagram.com" target="_blank"><img src="logo/Insta.png" alt="icon" class="footer-icon"> Instagram</a>
+    <a href="https://facebook.com" target="_blank"><img src="logo/faccebook.png" alt="icon" class="footer-icon"> Facebook</a>
+  </div>
+</footer>
 
-  <!-- PIED DE PAGE -->
-  <footer class="footer">
-    <div class="footer-links">
-      <a href="#"><img src="logo/loupe.png" alt="icon" class="footer-icon"> Qui sommes-nous</a>
-      <a href="#"><img src="logo/livre.png" alt="icon" class="footer-icon"> Mentions légales</a>
-      <a href="#"><img src="logo/logo IHM.png" alt="icon" class="footer-icon"> Contact</a>
-    </div>
-    <div class="footer-socials">
-      <a href="https://instagram.com" target="_blank"><img src="logo/Insta.png" alt="icon" class="footer-icon"> Instagram</a>
-      <a href="https://facebook.com" target="_blank"><img src="logo/faccebook.png" alt="icon" class="footer-icon"> Facebook</a>
-    </div>
-  </footer>
+<!-- MODALE "Qui sommes-nous" -->
+<div id="aboutModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('aboutModal')">&times;</span>
+    <h2>Qui sommes-nous ?</h2>
+    <p>
+      IHM MANIA est une communauté passionnée par les interfaces homme-machine, 
+      le design interactif, l’ergonomie et la technologie. Notre objectif est de favoriser 
+      l’apprentissage et la collaboration à travers des ressources, des groupes, des événements et un forum.
+    </p>
+  </div>
+</div>
+
+<!-- MODALE "Mentions légales" -->
+<div id="legalModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('legalModal')">&times;</span>
+    <h2>Mentions légales</h2>
+    <p>
+      Éditeur : IHM MANIA<br>
+      Responsable de la publication : L’équipe IHM MANIA<br>
+      Hébergeur : ServeurNet, 123 rue des Données, 75000 Paris<br>
+      Conformité RGPD : Vos données personnelles sont protégées et ne sont jamais transmises à des tiers.<br>
+      Cookies : Ce site utilise des cookies pour améliorer l’expérience utilisateur.
+    </p>
+  </div>
+</div>
+
+
 
   <script src="IHM.js"></script>
 </body>
