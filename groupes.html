@@ -3,11 +3,31 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ressources - IHM MANIA</title>
+  <title>Groupes - IHM MANIA</title>
   <link rel="stylesheet" href="IHM.css" />
+  <style>
+    .group-meta {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin: 10px 0;
+      font-size: 14px;
+      color: #80eaff;
+    }
+    .result-item {
+      border: 1px solid #80eaff;
+      border-radius: 10px;
+      padding: 15px;
+      margin-bottom: 20px;
+      background-color: #0a0f1a;
+    }
+    .result-buttons button {
+      margin-right: 10px;
+    }
+  </style>
 </head>
 <body>
-  <!-- HEADER IDENTIQUE -->
+  <!-- HEADER -->
   <header>
     <div class="left-section">
       <a href="ihm.html">
@@ -21,7 +41,7 @@
     </div>
   </header>
 
-  <!-- NAVIGATION IDENTIQUE -->
+  <!-- NAVIGATION -->
   <nav class="main-nav">
     <div class="button-bar">
       <button onclick="location.href='ihm.html'">Accueil</button>
@@ -34,13 +54,75 @@
       <button onclick="location.href='faq.html'">FAQ</button>
     </div>
     <div class="search-bar">
-      <input type="text" placeholder="Recherche..." />
+      <input type="text" placeholder="Recherche de groupes..." />
     </div>
   </nav>
 
+  <!-- BARRE DE CRITÈRES -->
+  <section class="custom-bar">
+    <select class="dropdown-menu">
+      <option>Thématique</option>
+      <option>Développement</option>
+      <option>Design</option>
+      <option>Recherche</option>
+    </select>
+    <select class="dropdown-menu">
+      <option>Niveau</option>
+      <option>Débutant</option>
+      <option>Intermédiaire</option>
+      <option>Avancé</option>
+    </select>
+    <select class="dropdown-menu">
+      <option>Activité</option>
+      <option>Très actif</option>
+      <option>Modéré</option>
+      <option>Inactif</option>
+    </select>
+    <select class="dropdown-menu">
+      <option>Accessibilité</option>
+      <option>Ouvert</option>
+      <option>Sur invitation</option>
+    </select>
+    <button class="action-button">Valider</button>
+    <img src="logo/logo IHM.png" alt="Icône interactive" class="clickable-image" />
+  </section>
 
+  <!-- RÉSULTATS DE GROUPES -->
+  <section class="search-results">
+    <div class="result-item">
+      <h3>Groupe UX Débutants</h3>
+      <div class="group-meta">
+        <div><strong>Membres :</strong> 12</div>
+      </div>
+      <p class="result-description">Un groupe pour les passionnés qui découvrent l'expérience utilisateur.</p>
+      <div class="result-tags">#UX #Débutant #Partage</div>
+      <div class="result-buttons">
+        <button>Rejoindre</button>
+        <button>Signaler</button>
+        <button>Explorer</button>
+        <button>Contacter</button>
+        <button>Planifier une réunion</button>
+      </div>
+    </div>
 
-  <!-- FOOTER IDENTIQUE -->
+    <div class="result-item">
+      <h3>Prototype & Figma Experts</h3>
+      <div class="group-meta">
+        <div><strong>Membres :</strong> 25</div>
+      </div>
+      <p class="result-description">Échangez sur les outils et techniques avancés de prototypage.</p>
+      <div class="result-tags">#Figma #Design #Expert</div>
+      <div class="result-buttons">
+        <button>Rejoindre</button>
+        <button>Signaler</button>
+        <button>Explorer</button>
+        <button>Contacter</button>
+        <button>Planifier une réunion</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="footer-links">
       <a href="#"><img src="logo/loupe.png" alt="icon" class="footer-icon"> Qui sommes-nous</a>

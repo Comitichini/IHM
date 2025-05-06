@@ -3,11 +3,31 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ressources - IHM MANIA</title>
+  <title>Événements - IHM MANIA</title>
   <link rel="stylesheet" href="IHM.css" />
+  <style>
+    .event-meta {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin: 10px 0;
+      font-size: 14px;
+      color: #80eaff;
+    }
+    .result-item {
+      border: 1px solid #80eaff;
+      border-radius: 10px;
+      padding: 15px;
+      margin-bottom: 20px;
+      background-color: #0a0f1a;
+    }
+    .result-buttons button {
+      margin-right: 10px;
+    }
+  </style>
 </head>
 <body>
-  <!-- HEADER IDENTIQUE -->
+  <!-- HEADER -->
   <header>
     <div class="left-section">
       <a href="ihm.html">
@@ -21,7 +41,7 @@
     </div>
   </header>
 
-  <!-- NAVIGATION IDENTIQUE -->
+  <!-- NAVIGATION -->
   <nav class="main-nav">
     <div class="button-bar">
       <button onclick="location.href='ihm.html'">Accueil</button>
@@ -34,13 +54,71 @@
       <button onclick="location.href='faq.html'">FAQ</button>
     </div>
     <div class="search-bar">
-      <input type="text" placeholder="Recherche..." />
+      <input type="text" placeholder="Recherche d'événements..." />
     </div>
   </nav>
 
+  <!-- BARRE DE CRITÈRES -->
+  <section class="custom-bar">
+    <select class="dropdown-menu">
+      <option>Catégorie</option>
+      <option>Atelier</option>
+      <option>Conférence</option>
+      <option>Webinaire</option>
+    </select>
+    <select class="dropdown-menu">
+      <option>Niveau</option>
+      <option>Débutant</option>
+      <option>Intermédiaire</option>
+      <option>Avancé</option>
+    </select>
+    <select class="dropdown-menu">
+      <option>Statut</option>
+      <option>Ouvert</option>
+      <option>Complet</option>
+      <option>À venir</option>
+    </select>
+    <input type="date" class="date-picker" />
+    <button class="action-button">Valider</button>
+    <img src="logo/logo IHM.png" alt="Icône interactive" class="clickable-image" />
+  </section>
 
+  <!-- RÉSULTATS D'ÉVÉNEMENTS -->
+  <section class="search-results">
+    <div class="result-item">
+      <h3>Atelier UI/UX Design</h3>
+      <div class="event-meta">
+        <div><strong>Date :</strong> 10/05/2025</div>
+        <div><strong>Heure :</strong> 14h00 - 16h00</div>
+      </div>
+      <p class="result-description">Participez à un atelier pratique pour apprendre les bases de l'UI/UX avec des exercices concrets.</p>
+      <div class="result-tags">#Atelier #Débutant #UIUX</div>
+      <div class="result-buttons">
+        <button>S'inscrire</button>
+        <button>Rejoindre</button>
+        <button>Suivre</button>
+        <button>Signaler</button>
+      </div>
+    </div>
 
-  <!-- FOOTER IDENTIQUE -->
+    <div class="result-item">
+      <h3>Conférence sur l'IHM adaptative</h3>
+      <div class="event-meta">
+        <div><strong>Date :</strong> 22/05/2025</div>
+        <div><strong>Heure :</strong> 10h00 - 11h30</div>
+      </div>
+      <p class="result-description">Une conférence animée par des experts sur les nouvelles interfaces adaptatives et intelligentes.</p>
+      <div class="result-tags">#Conférence #Expert #Accessibilité</div>
+      <div class="result-buttons">
+        <button>S'inscrire</button>
+        <button>Rejoindre</button>
+        <button>Suivre</button>
+        <button>Signaler</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="footer-links">
       <a href="#"><img src="logo/loupe.png" alt="icon" class="footer-icon"> Qui sommes-nous</a>

@@ -3,11 +3,31 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ressources - IHM MANIA</title>
+  <title>FAQ - IHM MANIA</title>
   <link rel="stylesheet" href="IHM.css" />
+  <style>
+    .faq-meta {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin: 10px 0;
+      font-size: 14px;
+      color: #80eaff;
+    }
+    .result-item {
+      border: 1px solid #80eaff;
+      border-radius: 10px;
+      padding: 15px;
+      margin-bottom: 20px;
+      background-color: #0a0f1a;
+    }
+    .result-buttons button {
+      margin-right: 10px;
+    }
+  </style>
 </head>
 <body>
-  <!-- HEADER IDENTIQUE -->
+  <!-- HEADER -->
   <header>
     <div class="left-section">
       <a href="ihm.html">
@@ -21,7 +41,7 @@
     </div>
   </header>
 
-  <!-- NAVIGATION IDENTIQUE -->
+  <!-- NAVIGATION -->
   <nav class="main-nav">
     <div class="button-bar">
       <button onclick="location.href='ihm.html'">Accueil</button>
@@ -34,13 +54,77 @@
       <button onclick="location.href='faq.html'">FAQ</button>
     </div>
     <div class="search-bar">
-      <input type="text" placeholder="Recherche..." />
+      <input type="text" placeholder="Recherche dans la FAQ..." />
     </div>
   </nav>
 
+  <!-- BARRE DE CRITÈRES -->
+  <section class="custom-bar">
+    <select class="dropdown-menu">
+      <option>Catégorie</option>
+      <option>Général</option>
+      <option>Technique</option>
+      <option>Fonctionnalité</option>
+    </select>
+    <select class="dropdown-menu">
+      <option>Niveau</option>
+      <option>Débutant</option>
+      <option>Intermédiaire</option>
+      <option>Avancé</option>
+    </select>
+    <select class="dropdown-menu">
+      <option>Popularité</option>
+      <option>Les plus consultées</option>
+      <option>Récentes</option>
+      <option>Non résolues</option>
+    </select>
+    <select class="dropdown-menu">
+      <option>Status</option>
+      <option>Ouverte</option>
+      <option>Résolue</option>
+    </select>
+    <button class="action-button">Valider</button>
+    <img src="logo/logo IHM.png" alt="Icône interactive" class="clickable-image" />
+  </section>
 
+  <!-- RÉSULTATS FAQ -->
+  <section class="search-results">
+    <div class="result-item">
+      <h3>Comment créer une interface utilisateur réactive ?</h3>
+      <div class="faq-meta">
+        <div><strong>Type :</strong> Technique</div>
+      </div>
+      <p class="result-description">Cette question explore les bonnes pratiques pour concevoir des interfaces réactives avec HTML/CSS/JS.</p>
+      <div class="result-tags">#UI #Réactivité #Front-end</div>
+      <div class="result-buttons">
+        <button>Lire</button>
+        <button>Tagger</button>
+        <button>Rechercher</button>
+        <button>Commenter</button>
+        <button>Liker</button>
+        <button>Disliker</button>
+      </div>
+    </div>
 
-  <!-- FOOTER IDENTIQUE -->
+    <div class="result-item">
+      <h3>Quelle est la différence entre UX et UI ?</h3>
+      <div class="faq-meta">
+        <div><strong>Type :</strong> Général</div>
+      </div>
+      <p class="result-description">Une explication claire pour bien distinguer l’expérience utilisateur de l’interface utilisateur.</p>
+      <div class="result-tags">#UX #UI #Définition</div>
+      <div class="result-buttons">
+        <button>Lire</button>
+        <button>Tagger</button>
+        <button>Rechercher</button>
+        <button>Commenter</button>
+        <button>Liker</button>
+        <button>Disliker</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="footer-links">
       <a href="#"><img src="logo/loupe.png" alt="icon" class="footer-icon"> Qui sommes-nous</a>

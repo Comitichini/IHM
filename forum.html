@@ -5,6 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ressources - IHM MANIA</title>
   <link rel="stylesheet" href="IHM.css" />
+  <style>
+    .forum-meta {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin: 10px 0;
+      font-size: 14px;
+      color: #80eaff;
+    }
+  </style>
 </head>
 <body>
   <!-- HEADER IDENTIQUE -->
@@ -38,7 +48,57 @@
     </div>
   </nav>
 
+  <!-- BARRE DE CRITÈRES -->
+  <section class="custom-bar">
+    <select class="dropdown-menu">
+      <option>Sujet populaire</option>
+      <option>Les plus actifs</option>
+      <option>Dernier actue</option>
+    </select>
+    <select class="dropdown-menu">
+      <option>Debutant</option>
+      <option>Confirmer</option>
+      <option>Expert</option>
+    </select>
+    <button class="action-button">Valider</button>
+    <img src="logo/logo IHM.png" alt="Icône interactive" class="clickable-image" />
+  </section>
 
+  <!-- RÉSULTATS DE COURS -->
+  <section class="search-results">
+    <div class="result-item">
+      <h3>Introduction à l'IHM</h3>
+      <div class="forum-meta">
+        <div><strong>Niveau :</strong> Débutant</div>
+        <div><strong>Date :</strong> 02/05/2025</div>
+        <div><strong>Messages :</strong> 5</div>
+      </div>
+      <p class="result-description">Découverte des principes fondamentaux des interfaces homme-machine.</p>
+      <div class="result-tags">#UX #Débutant #Théorie</div>
+      <div class="result-buttons">
+        <button>Lire</button>
+        <button>Signaler</button>
+        <button>Liker</button>
+        <button>Disliker</button>
+      </div>
+    </div>
+    <div class="result-item">
+      <h3>Prototypage avec Figma</h3>
+      <div class="forum-meta">
+        <div><strong>Niveau :</strong> Intermédiaire</div>
+        <div><strong>Date :</strong> 28/04/2025</div>
+        <div><strong>Messages :</strong> 8</div>
+      </div>
+      <p class="result-description">Créez des maquettes interactives avec des outils professionnels.</p>
+      <div class="result-tags">#Prototype #Design #Figma</div>
+      <div class="result-buttons">
+        <button>Lire</button>
+        <button>Signaler</button>
+        <button>Liker</button>
+        <button>Disliker</button>
+      </div>
+    </div>
+  </section>
 
   <!-- FOOTER IDENTIQUE -->
   <footer class="footer">
